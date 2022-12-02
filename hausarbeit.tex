@@ -10,8 +10,57 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 
+% Koordinatensysteme
+\usepackage{tkz-euclide}
+
 % Befehle
 \newcommand{\m}[1]{\begin{pmatrix}#1\end{pmatrix}}
+
+\newcommand{\cspm}[1]{\begin{figure}[h]
+    \begin{tikzpicture}
+       \tkzInit[xmax=10,ymax=10,xmin=-10,ymin=-10]
+
+        % Gitter
+        \draw[step=5mm, gray, thin] (-5,-5) grid (5,5);
+
+        % Koordinatensystem
+        \foreach \x in {0,1,2,3,4,5}
+            \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
+        \foreach \y in {0,1,2,3,4,5}
+            \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
+
+        \foreach \x in {-1,-2,-3,-4,-5}
+            \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
+        \foreach \y in {-1,-2,-3,-4,-5}
+            \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
+
+        % Punkte und Vektoren
+        #1
+        
+    \end{tikzpicture}
+\end{figure}}
+
+\newcommand{\csp}[1]{\begin{figure}[h]
+    \begin{tikzpicture}
+       \tkzInit[xmax=10,ymax=10,xmin=-10,ymin=-10]
+
+        % Gitter
+        \draw[step=5mm, gray, thin] (0,0) grid (10,10);
+
+        % Koordinatensystem
+        \foreach \x in {0,1,2,3,4,5,6,7,8,9,10}
+            \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
+        \foreach \y in {0,1,2,3,4,5,6,7,8,9,10}
+            \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
+
+        % Punkte und Vektoren
+        #1
+        
+    \end{tikzpicture}
+\end{figure}}
+
+% Einstellungen
+\setlength{\parindent}{0pt}
 
 % Metadaten
 \title{Verschiebung von Koordinatensystemen}
@@ -38,16 +87,42 @@
     \paragraph*{Punkte}
 
     Ein Punkt $P$ wurde bisher in der Form $P(x,y)$ dargestellt. Dies wird in der folgenden Arbeit nicht mehr verwendet. Stattdessen wird
-    der Punkt $P$ in der Form $\m{x \\ y}$ dargestellt.
+    der Punkt $P$ in der Form $\m{x \\ y}$ dargestellt. Dies ist eine sogenannte Matrix mit zwei Zeilen und einer Spalte.
+    Die erste Zeile enthält die x-Koordinate, die zweite Zeile die y-Koordinate.
 
     
     \section{Vektoren}
 
+    Geometrische Vektoren sind Pfeile (oder Pfeilklassen). $\vec{v}$ ist ein Vektor.
+    Vektoren werden durch ihre Länge in $x$-Richtung und $y$-Richtung definiert
+    (bei drei Dimensionen zusätzlich in $z$-Richtung) und mit einem Pfeil über dem Buchstaben gekennzeichnet.
+    Vektoren haben keine Feste Postition im Koordinatensystem. Sie können beliebig verschoben werden.
+    Solange der Vektor alle seine Eigenschaften (Länge in $x$-, $y$- und ggf. $z$-Richtung) behält,
+    ist er der gleiche Vektor. \textbf{Anhang: Vektoren 1}
+
+    % Anhänge
+
+    \newpage
+
+    \section{Anhänge}
+
+    \subsection{Vektoren 1}
+    \cspm{
+        % Vektor 1
+        \draw[->](-4,0.5) -- (-2,1.5) node[above] {$\vec{v}$};
+
+        % Vektor 2
+        \draw[->](2,2) -- (4,3) node[above] {$\vec{v}$};
+
+        % Vektor 3
+        \draw[->](-1,-3) -- (1,-2) node[above] {$\vec{v}$};
+    }
+    Koordinatensystem mit dem Vektor $\vec{v} = \m{2 \\ 1}$ in drei verschiedenen Positionen.
 
 \end{document}
 
 
-Notizen und Hilfen
+% Notizen und Hilfen
 
 % Der Satz des Pytagoras lautet: $a^2 + b^2 = c^2$.
 % Die PQ-Formel latuet:
