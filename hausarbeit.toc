@@ -1,5 +1,0 @@
-\babel@toc {ngerman}{}\relax 
-\contentsline {section}{\numberline {1}Einführung}{2}{}%
-\contentsline {subsection}{\numberline {1.1}Vorwort}{2}{}%
-\contentsline {subsection}{\numberline {1.2}Schreibweisen und Definitionen}{2}{}%
-\contentsline {section}{\numberline {2}Vektoren}{2}{}%
