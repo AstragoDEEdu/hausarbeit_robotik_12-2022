@@ -1,29 +1,66 @@
-% This is a simple sample document.  For more complicated documents take a look in the exercise tab. Note that everything that comes after a % symbol is treated as comment and ignored when the code is compiled.
+\documentclass{article}
 
-\documentclass{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
+% Umlaut-Support
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
-\usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
+% AMS
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
 
-\title{Verschiebung von Koordinatensystemen} % Sets article title
-\author{Justus Seeck} % Sets authors name
-\date{\today} % Sets date for date compiled
+% Befehle
+\newcommand{\m}[1]{\begin{pmatrix}#1\end{pmatrix}}
 
-% The preamble ends with the command \begin{document}
-\begin{document} % All begin commands must be paired with an end command somewhere
-    \maketitle % creates title using information in preamble (title, author, date)
+% Metadaten
+\title{Verschiebung von Koordinatensystemen}
+\author{Justus Seeck}
+\date{\today}
+
+\begin{document}
+    \maketitle
+
+    \tableofcontents
+
+    \newpage
+
+    \section{Einführung}
+
+    \subsection{Vorwort}
+
+    In der folgenden Arbeit wird lediglich die Verschiebung von Koordinatensystemen in der Ebene (also in zwei Dimensionen) behandelt.
+    Die Methodik lässt sich jedoch auch auf die dritte Dimension übertragen. Auch die Anzahl der Verschiebungen ist beliebig, da man die
+    hier verwendete Formel beliebig oft hintereinander anwenden kann, wird hier jedoch auf eine Verschiebung beschränkt.
+
+    \subsection{Schreibweisen und Definitionen}
     
-    \section{Hello World!} % creates a section
-    
-    \textbf{Hello World!} Today I am learning \LaTeX. %notice how the command will end at the first non-alphabet charecter such as the . after \LaTeX
-     \LaTeX{} is a great program for writing math. I can write in line math such as $a^2+b^2=c^2$ %$ tells LaTexX to compile as math
-     . I can also give equations their own space:
-    \begin{equation} % Creates an equation environment and is compiled as math
-    \gamma^2+\theta^2=\omega^2
-    \end{equation}
-    If I do not leave any blank lines \LaTeX{} will continue  this text without making it into a new paragraph.  Notice how there was no indentation in the text after equation (1).  
-    Also notice how even though I hit enter after that sentence and here $\downarrow$
-     \LaTeX{} formats the sentence without any break.  Also   look  how      it   doesn't     matter          how    many  spaces     I put     between       my    words.
-    
-    For a new paragraph I can leave a blank space in my code.
+    \paragraph*{Punkte}
 
-\end{document} % This is the end of the document
+    Ein Punkt $P$ wurde bisher in der Form $P(x,y)$ dargestellt. Dies wird in der folgenden Arbeit nicht mehr verwendet. Stattdessen wird
+    der Punkt $P$ in der Form $\m{x \\ y}$ dargestellt.
+
+    
+    \section{Vektoren}
+
+
+\end{document}
+
+
+Notizen und Hilfen
+
+% Der Satz des Pytagoras lautet: $a^2 + b^2 = c^2$.
+% Die PQ-Formel latuet:
+    
+% \[
+%     x = - \frac{p}{2} \pm \sqrt{ \left ( \frac{p}{2}^2 \right ) - q }
+% \]
+
+% \[
+%     \begin{pmatrix}
+%         1 & 2 & 3 \\
+%         4 & 5 & 6 \\
+%         7 & 8 & 9
+
+%     \end{pmatrix}
+% \]
