@@ -13,6 +13,9 @@
 % Koordinatensysteme
 \usepackage{tkz-euclide}
 
+% Grafiken und Bilder
+\usepackage{graphicx}
+
 % Seiteneinrichtung
 \usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry} % https://latex-kurs.blogspot.com/2012/09/latex-seitenrander-und-textwidth.html
 
@@ -96,8 +99,8 @@
     Die erste Zeile enthält die x-Koordinate, die zweite Zeile die y-Koordinate.
     Da im folgenden mit zwei verschiedenen Koordinatensystemen, dem Weltsystem $U$ und dem Toolsystem $T$, gearbeitet wird,
     werden Punkte im Bezug auf ein Koordinatensystem mit Index angegeben. Der Punkt $P$ im Bezug zum Weltsystem $U$ wird
-    folgendermaßen dargestellt: $[P]_{U}$.
-    Im Bezug zum Toolsystem lautet die Darstellung $[P]_{T}$.
+    folgendermaßen dargestellt: ${[P]}_{U}$.
+    Im Bezug zum Toolsystem lautet die Darstellung ${[P]}_{T}$.
     
     \section{Vektoren}
 
@@ -110,7 +113,7 @@
 
     \subsection{Rechnen mit Vektoren}
     Vektoren können durch mathematische Operationen verändert werden. Multipliziert man beispielweise den Vektor $\m{2 \\ 0}$ mit $-1$,
-    erhält man den Vektor $\m{-2 \\ 0}$. 
+    erhält man den Vektor $\m{-2 \\ 0}$. Man kan auch zwei Vektoren addieren. Aus $\m{2 \\ 3}$ und $\m{0 \\ 2}$ erhält man 
 
     % \subsection{Verschiebung von Punkten mittels Vektoren}
     % Um einen Punkt $P$ um einen Vektor $\vec{v}$ zu verschieben, wird der Punkt $P$ mit dem Vektor $\vec{v}$ multipliziert.
@@ -134,6 +137,15 @@
         \draw[->](-1,-3) -- (1,-2) node[above] {$\vec{v}$};
     }
     Koordinatensystem mit dem Vektor $\vec{v} = \m{2 \\ 1}$ in drei verschiedenen Positionen.
+
+    \subsection{Vektoren 2}
+
+    \begin{figure}[h]
+        \centering
+        \scalebox{0.5}{
+            \includegraphics{./images/Mathemann.png}
+        }
+    \end{figure}
 
 \end{document}
 
