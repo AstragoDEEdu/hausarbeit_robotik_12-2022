@@ -113,7 +113,21 @@
 
     \subsection{Rechnen mit Vektoren}
     Vektoren können durch mathematische Operationen verändert werden. Multipliziert man beispielweise den Vektor $\m{2 \\ 0}$ mit $-1$,
-    erhält man den Vektor $\m{-2 \\ 0}$. Man kan auch zwei Vektoren addieren. Aus $\m{2 \\ 3}$ und $\m{0 \\ 2}$ erhält man 
+    erhält man den Vektor $\m{-2 \\ 0}$. Man kan auch zwei Vektoren addieren. Aus $\m{2 \\ 3}$ und $\m{0 \\ 2}$ erhält man den
+    Vektor $\m{2 \\ 5}$. \textbf{Anhang: Vektoren 2}.
+
+    \subsection{Einheitsvektoren im Koordinatensystem}
+    Ein Punkt $P$ kann mit Hilfe von Einheitsvektoren im Koordinatensystem $U$ beschrieben werden. Es gibt jeweils einen Einheitsvektor in
+    $x$-Richtung und einen Einheitsvektor in $y$-Richtung. Der Einheitsvektor in $x$-Richtung ist $\vec{{x}_{U}} = \m{1 \\ 0}$ und der Einheitsvektor in
+    $y$-Richtung ist $\vec{{y}_{U}} = \m{0 \\ 1}$. Die Länge des Einheitsvektors ist dabei $1$ in seine respective Richtung. Um nun beispielweise den Punkt
+    ${[P]}_{U} = \m{a \\ b}$ zu beschreiben, benötigt man den Ursprung des Koordinatensystems ${O}_{U}$, seine Koordinate in $x$-Richtung (hier: $a$),
+    seine Koordinate in $y$-Richtung (hier: $b$) und die beiden Einheitsvektoren $\vec{{x}_{U}}$ und $\vec{{y}_{U}}$.
+    
+    Es ergibt sich die folgende Formel:
+
+    \[
+        {[P]}_{U} = {[O]}_{U} + a \cdot \vec{{x}_{U}} + b \cdot \vec{{y}_{U}}
+    \]
 
     % \subsection{Verschiebung von Punkten mittels Vektoren}
     % Um einen Punkt $P$ um einen Vektor $\vec{v}$ zu verschieben, wird der Punkt $P$ mit dem Vektor $\vec{v}$ multipliziert.
@@ -139,7 +153,6 @@
     Koordinatensystem mit dem Vektor $\vec{v} = \m{2 \\ 1}$ in drei verschiedenen Positionen.
 
     \subsection{Vektoren 2}
-
     \begin{figure}[h]
         \centering
         \scalebox{0.5}{
