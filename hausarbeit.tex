@@ -13,6 +13,9 @@
 % Koordinatensysteme
 \usepackage{tkz-euclide}
 
+% Seiteneinrichtung
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry} % https://latex-kurs.blogspot.com/2012/09/latex-seitenrander-und-textwidth.html
+
 % Befehle
 \newcommand{\m}[1]{\begin{pmatrix}#1\end{pmatrix}}
 
@@ -86,12 +89,15 @@
 
     \subsection{Schreibweisen und Definitionen}
     
-    \paragraph*{Punkte}
+    \paragraph{Punkte}
 
     Ein Punkt $P$ wurde bisher in der Form $P(x,y)$ dargestellt. Dies wird in der folgenden Arbeit nicht mehr verwendet. Stattdessen wird
     der Punkt $P$ in der Form $\m{x \\ y}$ dargestellt. Dies ist eine sogenannte Matrix mit zwei Zeilen und einer Spalte.
     Die erste Zeile enthält die x-Koordinate, die zweite Zeile die y-Koordinate.
-
+    Da im folgenden mit zwei verschiedenen Koordinatensystemen, dem Weltsystem $U$ und dem Toolsystem $T$, gearbeitet wird,
+    werden Punkte im Bezug auf ein Koordinatensystem mit Index angegeben. Der Punkt $P$ im Bezug zum Weltsystem $U$ wird
+    folgendermaßen dargestellt: $[P]_{U}$.
+    Im Bezug zum Toolsystem lautet die Darstellung $[P]_{T}$.
     
     \section{Vektoren}
 
@@ -101,6 +107,14 @@
     Vektoren haben keine Feste Postition im Koordinatensystem. Sie können beliebig verschoben werden.
     Solange der Vektor alle seine Eigenschaften (Länge in $x$-, $y$- und ggf. $z$-Richtung) behält,
     ist er der gleiche Vektor. \textbf{Anhang: Vektoren 1}
+
+    \subsection{Rechnen mit Vektoren}
+    Vektoren können durch mathematische Operationen verändert werden. Multipliziert man beispielweise den Vektor $\m{2 \\ 0}$ mit $-1$,
+    erhält man den Vektor $\m{-2 \\ 0}$. 
+
+    % \subsection{Verschiebung von Punkten mittels Vektoren}
+    % Um einen Punkt $P$ um einen Vektor $\vec{v}$ zu verschieben, wird der Punkt $P$ mit dem Vektor $\vec{v}$ multipliziert.
+    
 
     % Anhänge
 
