@@ -88,7 +88,9 @@
     In der folgenden Arbeit wird lediglich die Verschiebung von Koordinatensystemen in der Ebene (also in zwei Dimensionen) behandelt.
     Die Methodik lässt sich jedoch auch auf die dritte Dimension übertragen. Auch die Anzahl der Verschiebungen ist beliebig, da man die
     hier verwendete Formel beliebig oft hintereinander anwenden kann, wird hier jedoch auf eine Verschiebung beschränkt.
-    Die Verschiebung von Koordinatensystemen findet beispielweise in der Robotik Anwendung: Am ende eines Roboterarms befindet sich meist ein weiteres Koordinatensystem, "Toolsystem", welches sich am Ende des Roboterarms befindet. Dadurch gibt es in diesem System keine verschiebung wenn sich der Arm bewegt, sondern lediglich wenn sich das tool, oder dessen Ladnung bewegt.
+    Die Verschiebung von Koordinatensystemen findet beispielweise in der Robotik Anwendung: Am Ende eines Roboterarms befindet sich meist ein weiteres Koordinatensystem,
+    "Toolsystem", welches sich am Ende des Roboterarms befindet. Dadurch gibt es in diesem System keine Verschiebung, wenn sich der Arm bewegt,
+    sondern lediglich wenn sich das Tool, oder dessen Ladung bewegt.
 
     \subsection{Schreibweisen und Definitionen}
     
@@ -109,12 +111,18 @@
     (bei drei Dimensionen zusätzlich in $z$-Richtung) und mit einem Pfeil über dem Buchstaben gekennzeichnet.
     Vektoren haben keine Feste Postition im Koordinatensystem. Sie können beliebig verschoben werden.
     Solange der Vektor alle seine Eigenschaften (Länge in $x$-, $y$- und ggf. $z$-Richtung) behält,
-    ist er der gleiche Vektor. \textbf{Anhang: Vektoren 1}
+    ist er der gleiche Vektor. \textbf{Anhang: Vektoren 1}. Zwischen zwei Vektroen lässt sich ein
+    Paralellogramm zeichnen. 
 
-    \subsection{Rechnen mit Vektoren}
+    \subsection{Rechnen mit Vektoren und Punkten}
     Vektoren können durch mathematische Operationen verändert werden. Multipliziert man beispielweise den Vektor $\m{2 \\ 0}$ mit $-1$,
     erhält man den Vektor $\m{-2 \\ 0}$. Man kan auch zwei Vektoren addieren. Aus $\m{2 \\ 3}$ und $\m{0 \\ 2}$ erhält man den
     Vektor $\m{2 \\ 5}$. \textbf{Anhang: Vektoren 2}.
+
+    Punkte können mithilfe von Vektoren verschoben werden. Der Punkt wird dabei mit dem Vektor
+    addiert. Dies entspricht dem "Anhängen" des Vektors an den Punkt. Das Ende des Vektors entspricht dann
+    dem neuen Punkt. Man kann auch ein Parallelogramm zwischen dem Punkt und dem Vektor bilden. Der "fehlende"
+    Punkt ergibt dann die gesuchte Stelle des neuen Punktes. \textbf{Anhang: Vektoren 3}.
 
     \subsection{Einheitsvektoren im Koordinatensystem}
     Ein Punkt $P$ kann mit Hilfe von Einheitsvektoren im Koordinatensystem $U$ beschrieben werden. Es gibt jeweils einen Einheitsvektor in
@@ -133,7 +141,7 @@
     % Um einen Punkt $P$ um einen Vektor $\vec{v}$ zu verschieben, wird der Punkt $P$ mit dem Vektor $\vec{v}$ multipliziert.
     
 
-    % Anhänge
+    % ========== Anhänge ==========
 
     \newpage
 
@@ -156,9 +164,20 @@
     \begin{figure}[h]
         \centering
         \scalebox{0.5}{
-            \includegraphics{./images/Mathemann.png}
+            \includegraphics{./images/Vektoren-2-Rechnen-2022-12-19@16-38-25.png}
         }
     \end{figure}
+    Multipliziert man den Vektor $\vec{u}$ mit $-1$, erhält man so den Vektor $\vec{v}$.
+    Addiert man die Vektoren $\vec{a}$ und $\vec{w}$ resultiert der Vektor $\vec{b}$.
+
+    \subsection{Vektoren 3}
+    \begin{figure}[h]
+        \centering
+        \scalebox{0.5}{
+            \includegraphics{./images/Vektoren-3-Verschiebung-am-Parallelogramm-2022-12-19@16-30-31.png}
+        }
+    \end{figure}
+    Der Punkt $P$ wird mit dem Vektor $\vec{UV}$ verschoben. Durch das Paralellogramm ergibt sich der neue Punkt $P'$. 
 
 \end{document}
 
