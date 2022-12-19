@@ -125,9 +125,13 @@
     Punkt ergibt dann die gesuchte Stelle des neuen Punktes. \textbf{Anhang: Vektoren 3}.
 
     \subsection{Einheitsvektoren im Koordinatensystem}
-    Ein Punkt $P$ kann mit Hilfe von Einheitsvektoren im Koordinatensystem $U$ beschrieben werden. Es gibt jeweils einen Einheitsvektor in
+    Ein Punkt $P$ kann mit Hilfe von Einheitsvektoren im Koordinatensystem $U$ beschrieben werden.
+    Das Koordinatensystem $U$ hat rechtwinklige Achsen.
+    Es gibt jeweils einen Einheitsvektor in
     $x$-Richtung und einen Einheitsvektor in $y$-Richtung. Der Einheitsvektor in $x$-Richtung ist $\vec{{x}_{U}} = \m{1 \\ 0}$ und der Einheitsvektor in
-    $y$-Richtung ist $\vec{{y}_{U}} = \m{0 \\ 1}$. Die Länge des Einheitsvektors ist dabei $1$ in seine respective Richtung. Um nun beispielweise den Punkt
+    $y$-Richtung ist $\vec{{y}_{U}} = \m{0 \\ 1}$. Die Länge des Einheitsvektors ist dabei $1$
+    (eine Längeneinheit)
+    in seine respective Richtung. Um nun beispielweise den Punkt
     ${[P]}_{U} = \m{a \\ b}$ zu beschreiben, benötigt man den Ursprung des Koordinatensystems ${O}_{U}$, seine Koordinate in $x$-Richtung (hier: $a$),
     seine Koordinate in $y$-Richtung (hier: $b$) und die beiden Einheitsvektoren $\vec{{x}_{U}}$ und $\vec{{y}_{U}}$.
     
@@ -136,6 +140,10 @@
     \[
         {[P]}_{U} = {[O]}_{U} + a \cdot \vec{{x}_{U}} + b \cdot \vec{{y}_{U}} = \m{a \\ b}
     \]
+
+    Der Punkt ${[P]}_{U}$ entspricht dem dem Punkt ${[O]}_{U}$ zu dem man eine Verschiebung in
+    $x$-Richtung (hier: $a \cdot \vec{{x}_{U}}$) und $y$-Richtung (hier: $b \cdot \vec{{y}_{U}}$) hinzufügt.
+    \textbf{Anhang: Vektoren 4}.
 
     % \subsection{Verschiebung von Punkten mittels Vektoren}
     % Um einen Punkt $P$ um einen Vektor $\vec{v}$ zu verschieben, wird der Punkt $P$ mit dem Vektor $\vec{v}$ multipliziert.
@@ -170,6 +178,8 @@
     Multipliziert man den Vektor $\vec{u}$ mit $-1$, erhält man so den Vektor $\vec{v}$.
     Addiert man die Vektoren $\vec{a}$ und $\vec{w}$ resultiert der Vektor $\vec{b}$.
 
+    \newpage
+
     \subsection{Vektoren 3}
     \begin{figure}[h]
         \centering
@@ -178,6 +188,19 @@
         }
     \end{figure}
     Der Punkt $P$ wird mit dem Vektor $\vec{UV}$ verschoben. Durch das Paralellogramm ergibt sich der neue Punkt $P'$. 
+    Der Vektor $\vec{UV}$ ist dabei der Vektor zwischen den beiden Punkten $U$ und $V$ und wird folgendermaßen beschrieben:
+    \[
+        \vec{v} = \vec{UV} = V - U
+    \]
+
+    \subsection{Vektoren 4}
+    \begin{figure}[h]
+        \centering
+        \scalebox{0.5}{
+            \includegraphics{./images/Vektoren-4-Einheitsvektoren-2022-12-19@17-04-43.png}
+        }
+    \end{figure}
+    Einheitsvektoren $xu$ und $yu$ im Koordinatensystem $U$ mit dem Punkt $P$ und seinen beschreibenden Abschnitten $a$ und $b$.
 
 \end{document}
 
