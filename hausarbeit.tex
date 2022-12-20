@@ -96,11 +96,12 @@
     
     \paragraph{Punkte}
 
-    Ein Punkt $P$ wurde bisher in der Form $P(x,y)$ dargestellt. Dies wird in der folgenden Arbeit nicht mehr verwendet. Stattdessen wird
+    Ein Punkt $P$ wurde bisher in der Form $P(x|y)$ dargestellt. Dies wird in der folgenden Arbeit nicht mehr verwendet. Stattdessen wird
     der Punkt $P$ in der Form $\m{x \\ y}$ dargestellt. Dies ist eine sogenannte Matrix mit zwei Zeilen und einer Spalte.
     Die erste Zeile enthält die x-Koordinate, die zweite Zeile die y-Koordinate.
     Da im folgenden mit zwei verschiedenen Koordinatensystemen, dem Weltsystem $U$ und dem Toolsystem $T$, gearbeitet wird,
-    werden Punkte im Bezug auf ein Koordinatensystem mit Index angegeben. Der Punkt $P$ im Bezug zum Weltsystem $U$ wird
+    werden Punkte im Bezug auf ein Koordinatensystem mit Index angegeben, insofern dies nötig ist.
+    Der Punkt $P$ im Bezug zum Weltsystem $U$ wird
     folgendermaßen dargestellt: ${[P]}_{U}$.
     Im Bezug zum Toolsystem lautet die Darstellung ${[P]}_{T}$.
     
@@ -149,8 +150,6 @@
     dem neuen Punkt. Man kann auch ein Parallelogramm zwischen dem Punkt und dem Vektor bilden. Der "fehlende"
     Punkt ergibt dann die gesuchte Stelle des neuen Punktes. \textbf{Anhang: Vektoren 3}.
 
-    % https://youtu.be/QHywLVUK3hc?t=1840
-
     \subsection{Einheitsvektoren im Koordinatensystem}
     Ein Punkt $P$ kann mit Hilfe von Einheitsvektoren im Koordinatensystem $U$ beschrieben werden.
     Das Koordinatensystem $U$ hat rechtwinklige Achsen.
@@ -175,9 +174,16 @@
     Befindet sich ein Vektor in einem Koordinatensystem, lässt sich dieser durch die Differenz
     des Anfangs- und Endpunktes des Vektors darstellen.
     Es ergibt sich folgendes: 
+    % https://youtu.be/QHywLVUK3hc?t=1840
     \[
         \vec{v} = \m{\Delta{x} \\ \Delta{y}}
     \]
+
+    \textbf{Anhang: Vektoren 5} zeigt die Darstellung eines Vektors in einem Koordinatensystem.
+    
+    \section{Die Verschiebung von Koordinatensystemen}
+
+
 
     % \subsection{Verschiebung von Punkten mittels Vektoren}
     % Um einen Punkt $P$ um einen Vektor $\vec{v}$ zu verschieben, wird der Punkt $P$ mit dem Vektor $\vec{v}$ multipliziert.
@@ -231,6 +237,30 @@
         }
     \end{figure}
     Einheitsvektoren $xu$ und $yu$ im Koordinatensystem $U$ mit dem Punkt $P$ und seinen beschreibenden Abschnitten $a$ und $b$.
+    
+    \newpage
+
+
+    \subsection{Vektoren 5}
+    \begin{figure}[h]
+        \centering
+        \scalebox{0.5}{
+            \includegraphics{./images/Vektoren-5-Vektoren-Delta-2022-12-20@16-30-21.png}
+        }
+    \end{figure}
+    Der Vektor $\vec{v}$ wird durch die Differenz des Anfangs- und Endpunktes des Vektors dargestellt.
+    \[
+        \vec{v} = \m{\Delta{x} \\ \Delta{y}} = \m{X2 - X1 \\ Y2 - Y1} = \m{5 - 2 \\ 2 - 3} = \m{3 \\ -1}
+    \]
+
+
+    \subsection{TITEL}
+    \begin{figure}[h]
+        \centering
+        \scalebox{0.5}{
+            \includegraphics{./images/Mathemann.png}
+        }
+    \end{figure}
 
 \end{document}
 
