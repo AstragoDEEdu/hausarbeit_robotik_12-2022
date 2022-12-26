@@ -287,7 +287,7 @@
     \[
       \begin{split}
         = \frac{1}{2} \cdot \left ( u_x^2 + u_y^2 + v_x^2 + v_y^2 - [u_x^2 + v_x^2 - 2u_x v_x + u_y^2 + v_y^2 - 2u_y v_y] \right ) \\
-        = \langle \m{u_x \\ u_y} \vert \m{v_x \\ v_y} \rangle = u_x v_x + u_y v_y
+        = \left \langle \m{u_x \\ u_y} \vert \m{v_x \\ v_y} \right \rangle = u_x v_x + u_y v_y
       \end{split}  
     \]
 
@@ -295,8 +295,27 @@
     Es ist nicht möglich, das Skalarprodukt mit Punkten zu bilden.
 
 
-    Nun lässt sich durch Umstellen der Winkel zwischen zwei koordinatengegebenen Vektoren berechnen:
-    
+    Nun lässt sich durch Umstellen der Winkel zwischen zwei koordinatengegebenen
+    Vektoren ($\vec{u}$ und $\vec{v}$) berechnen:
+
+    Aus den oberen Gleichungen geht hervor:
+
+    \[
+      \begin{split}
+        \langle \vec{u} \vert \vec{v} \rangle &= \lVert \vec{u} \rVert \cdot \lVert \vec{v} \rVert \cdot \cos \theta \\
+        &= \left \langle \m{u_x \\ u_y} \vert \m{v_x \\ v_y} \right \rangle \\
+        &= u_x v_x + u_y v_y \\
+      \end{split}  
+    \]
+
+    mit $\lVert \vec{u} \rVert = \sqrt{u_x^2 + u_y^2}$ und $\lVert \vec{v} \rVert = \sqrt{v_x^2 + v_y^2}$, dass $\theta$ zwischen 0 und 180 Grad folgendes Ergibt:
+     
+    \[
+      \begin{split}
+        \cos \theta &= \frac{\langle \vec{u} \vert \vec{v} \rangle}{\lVert \vec{u} \rVert \cdot \lVert \vec{v} \rVert} \\
+        \theta &= \cos^{-1} \left ( \frac{\langle \vec{u} \vert \vec{v} \rangle}{\lVert \vec{u} \rVert \cdot \lVert \vec{v} \rVert} \right ) \\
+      \end{split}  
+    \]
 
 
     % \subsection{Verschiebung von Punkten mittels Vektoren}
