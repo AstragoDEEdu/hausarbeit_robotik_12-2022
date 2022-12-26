@@ -22,48 +22,48 @@
 % Befehle
 \newcommand{\m}[1]{\begin{pmatrix}#1\end{pmatrix}}
 
-\newcommand{\cspm}[1]{\begin{figure}[h]
-    \begin{tikzpicture}
-       \tkzInit[xmax=10,ymax=10,xmin=-10,ymin=-10]
+% \newcommand{\cspm}[1]{\begin{figure}[h]
+%     \begin{tikzpicture}
+%        \tkzInit[xmax=10,ymax=10,xmin=-10,ymin=-10]
 
-        % Gitter
-        \draw[step=5mm, gray, thin] (-5,-5) grid (5,5);
+%         % Gitter
+%         \draw[step=5mm, gray, thin] (-5,-5) grid (5,5);
 
-        % Koordinatensystem
-        \foreach \x in {0,1,2,3,4,5}
-            \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
-        \foreach \y in {0,1,2,3,4,5}
-            \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
+%         % Koordinatensystem
+%         \foreach \x in {0,1,2,3,4,5}
+%             \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
+%         \foreach \y in {0,1,2,3,4,5}
+%             \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
 
-        \foreach \x in {-1,-2,-3,-4,-5}
-            \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
-        \foreach \y in {-1,-2,-3,-4,-5}
-            \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
+%         \foreach \x in {-1,-2,-3,-4,-5}
+%             \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
+%         \foreach \y in {-1,-2,-3,-4,-5}
+%             \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
 
-        % Punkte und Vektoren
-        #1
+%         % Punkte und Vektoren
+%         #1
         
-    \end{tikzpicture}
-\end{figure}}
+%     \end{tikzpicture}
+% \end{figure}}
 
-\newcommand{\csp}[1]{\begin{figure}[h]
-    \begin{tikzpicture}
-       \tkzInit[xmax=10,ymax=10,xmin=-10,ymin=-10]
+% \newcommand{\csp}[1]{\begin{figure}[h]
+%     \begin{tikzpicture}
+%        \tkzInit[xmax=10,ymax=10,xmin=-10,ymin=-10]
 
-        % Gitter
-        \draw[step=5mm, gray, thin] (0,0) grid (10,10);
+%         % Gitter
+%         \draw[step=5mm, gray, thin] (0,0) grid (10,10);
 
-        % Koordinatensystem
-        \foreach \x in {0,1,2,3,4,5,6,7,8,9,10}
-            \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
-        \foreach \y in {0,1,2,3,4,5,6,7,8,9,10}
-            \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
+%         % Koordinatensystem
+%         \foreach \x in {0,1,2,3,4,5,6,7,8,9,10}
+%             \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
+%         \foreach \y in {0,1,2,3,4,5,6,7,8,9,10}
+%             \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\y$};
 
-        % Punkte und Vektoren
-        #1
+%         % Punkte und Vektoren
+%         #1
         
-    \end{tikzpicture}
-\end{figure}}
+%     \end{tikzpicture}
+% \end{figure}}
 
 % Einstellungen
 \setlength{\parindent}{0pt}
@@ -125,24 +125,32 @@
 
     \textbf{Summen}
     \[
-        \m{a \\ b} + \m{c \\ d} = \m{a+c \\ b+d}
+        \begin{split}
+            \m{a \\ b} + \m{c \\ d} = \m{a+c \\ b+d}
+        \end{split}
     \]
 
     \textbf{Differenzen}
     \[
-        \m{a \\ b} - \m{c \\ d} = \m{a-c \\ b-d}
+        \begin{split}
+            \m{a \\ b} - \m{c \\ d} = \m{a-c \\ b-d}
+        \end{split}
     \]
 
-    \textbf{Skalares Produkt}
+    \textbf{Skalares Produkt} (Erklärung folgt)
     \[
-        r \cdot \m{a \\ b} = \m{r \cdot a \\ r \cdot b}
+        \begin{split}
+            r \cdot \m{a \\ b} = \m{r \cdot a \\ r \cdot b}
+        \end{split}
     \]
 
     Aus der Grafik (\textbf{Anhang: Vektoren 2}) wird zudem deutlich, dass die Summe zweier Vektoren (eine Aneinanderlegung von Pfeilen)
     die Summe der beiden Einzelvektoren (Koordinatenvektoren) ist:
 
     \[
-        [\vec{w} + \vec{a}] = [\vec{w}] + [\vec{a}]
+        \begin{split}
+            [\vec{w} + \vec{a}] = [\vec{w}] + [\vec{a}]
+        \end{split}
     \]
 
     Punkte können mithilfe von Vektoren verschoben werden. Der Punkt wird dabei mit dem Vektor
@@ -164,7 +172,9 @@
     Es ergibt sich die folgende Formel:
 
     \[
-        {[P]}_{U} = {[O]}_{U} + a \cdot \vec{{x}_{U}} + b \cdot \vec{{y}_{U}} = \m{a \\ b}
+        \begin{split}
+            {[P]}_{U} = {[O]}_{U} + a \cdot \vec{{x}_{U}} + b \cdot \vec{{y}_{U}} = \m{a \\ b}
+        \end{split}
     \]
 
     Der Punkt ${[P]}_{U}$ entspricht dem dem Punkt ${[O]}_{U}$ zu dem man eine Verschiebung in
@@ -176,7 +186,9 @@
     Es ergibt sich folgendes: 
     % https://youtu.be/QHywLVUK3hc?t=1840
     \[
-        \vec{v} = \m{\Delta{x} \\ \Delta{y}}
+        \begin{split}
+            \vec{v} = \m{\Delta{x} \\ \Delta{y}}
+        \end{split}
     \]
 
     \textbf{Anhang: Vektoren 5} zeigt die Darstellung eines Vektors in einem Koordinatensystem.
@@ -197,10 +209,48 @@
 
     % https://youtu.be/yFOq5MwBeeg
     \subsection{Länge von Vektoren und Abstände von Punkten}
-    Um den Verschiebevektor zu bestimmen, benötigen wir den Abstand zwischen dem Ursprung
-    des Toolsystems ${[{O}_{T}]}_{U}$ und dem Ursprung des Koordinatensystems $U$
-    also ${[O]}_{U}$.
-    Wir bestimmen die Länge des Vektors $\vec{v}$.
+    Um den Verschiebevektor zu bestimmen, wird der Abstand zwischen dem Ursprung
+    des Toolsystems ${[{O}_{T}]}_{U}$ und dem Ursprung des Koordinatensystems $U$ benötigt,
+    also ${[O]}_{U}$. Diese Formel kann auch für andere Punkte angewendet werden.
+    
+    Die Länge eines Vektors wird durch die Pythagoras-Formel berechnet.
+    Die Länge von $\vec{v}$ wird folgendermaßen dargestellt $\lVert \vec{v} \rVert$. 
+    
+
+    \[
+        \begin{split}
+            \lVert \vec{v} \rVert &= \lVert \m{\Delta x \\ \Delta y} \rVert \\
+            \lVert \vec{v} \rVert &= \sqrt{\Delta{x}^2 + \Delta{y}^2}
+        \end{split}
+    \]
+
+    Der Abstand zwischen den Punkten $P$ und $Q$ ist nach dioeser Formel dann:
+    $dist(P, Q) = \lVert \vec{PQ} \rVert$.
+    
+    ist ${[P]}_{U} = \m{u_x \\ u_y}$ und ${[Q]}_{U} = \m{v_x \\ v_y}$, dann folgt:
+
+    \[
+      \begin{split}
+        dist(P, Q) &= \lVert \vec{PQ} \rVert \\
+        &= \lVert \m{v_x - u_x \\ v_y - u_y} \rVert \\
+        &= \sqrt{(v_x - u_x)^2 + (v_y - u_y)^2} \\
+      \end{split}  
+    \] 
+
+    \newpage
+
+    \subsection{Das Skalarprodukt}
+    
+    "Das Skalarprodukt ist eine mathematische Verknüpfung, die zwei Vektoren eine Zahl (Skalar) zuordnet."
+
+    (https://www.mathebibel.de/skalarprodukt - Letzter Aufruf: 26.12.2022 @ 17:03:54)
+    In diesem Fall wird das Skalarprodukt verwendet, um den Winkel $\theta$ zwischen zwei Vektoren zu berechnen.
+    \textbf{Anhang: Skalarprodukt 1} zeigt eine Skizze.
+    
+    $\theta$ ist der Winkel zwischen den Vektoren $\vec{v}$ und $\vec{u}$.
+    
+
+    
 
     % Hier Anhang sinnvoll
 
@@ -250,7 +300,9 @@
     Der Punkt $P$ wird mit dem Vektor $\vec{UV}$ verschoben. Durch das Paralellogramm ergibt sich der neue Punkt $P'$. 
     Der Vektor $\vec{UV}$ ist dabei der Vektor zwischen den beiden Punkten $U$ und $V$ und wird folgendermaßen beschrieben:
     \[
-        \vec{v} = \vec{UV} = V - U
+        \begin{split}
+            \vec{v} = \vec{UV} = V - U
+        \end{split}  
     \]
 
     \subsection{Vektoren 4}
@@ -274,9 +326,24 @@
     \end{figure}
     Der Vektor $\vec{v}$ wird durch die Differenz des Anfangs- und Endpunktes des Vektors dargestellt.
     \[
-        \vec{v} = \m{\Delta{x} \\ \Delta{y}} = \m{X2 - X1 \\ Y2 - Y1} = \m{5 - 2 \\ 2 - 3} = \m{3 \\ -1}
+        \begin{split}
+            \vec{v} = \m{\Delta{x} \\ \Delta{y}} = \m{X2 - X1 \\ Y2 - Y1} = \m{5 - 2 \\ 2 - 3} = \m{3 \\ -1}
+        \end{split}  
     \]
 
+
+    \subsection{Skalarprodukt 1}
+    \begin{figure}[h]
+        \centering
+        \scalebox{0.5}{
+            \includegraphics{./images/Skalarprodukt-1-Skizze-2022-12-26@17-27-28.png}
+        }
+    \end{figure}
+    $\vec{w}$ ist der Differenzvektor aus $\vec{v}$ und $\vec{u}$.
+    Er hat die Länge $\lVert \vec{v} - \vec{u} \rVert$.
+    Der Winkel zwischen $\vec{v}$ und $\vec{u}$ ist $\theta$.
+
+    \newpage
 
     \subsection{TITEL}
     \begin{figure}[h]
@@ -285,6 +352,20 @@
             \includegraphics{./images/Mathemann.png}
         }
     \end{figure}
+
+
+    % ========== Quellen ==========
+
+    \newpage
+
+    \section{Quellen}
+
+    \begin{itemize}
+        \item eigene Aufzeichnungen
+        \item https://mathe-lok.de/schuelervorlesung-kinematik-von-roboterarmen (Letzter Aufruf: )
+        \item https://www.mathebibel.de/skalarprodukt (Letzter Aufruf: 26.12.2022 @ 17:23:01)
+    \end{itemize}
+
 
 \end{document}
 
