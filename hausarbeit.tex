@@ -22,6 +22,9 @@
 % Befehle
 \newcommand{\m}[1]{\begin{pmatrix}#1\end{pmatrix}}
 
+
+\newcommand{\myeq}[1]{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily #1}}}{=}}}
+
 % \newcommand{\cspm}[1]{\begin{figure}[h]
 %     \begin{tikzpicture}
 %        \tkzInit[xmax=10,ymax=10,xmin=-10,ymin=-10]
@@ -248,15 +251,52 @@
     \textbf{Anhang: Skalarprodukt 1} zeigt eine Skizze.
     
     $\theta$ ist der Winkel zwischen den Vektoren $\vec{v}$ und $\vec{u}$.
+    Beide Bektoren haben den selben Ursprung. Der Winkel $\theta$ ist hierbei ungerichtet
+    (Siehe \textbf{Anhang: Skalarprodukt 1}) und liegt zwischen 0 und 180 Grad.
     
+    Der kosinussatz besagt nun folgendes:
 
+    \[
+        \begin{split}
+            \lVert \vec{v} - \vec{u} \rVert &= \lVert \vec{u} \rVert ^2 + \lVert \vec{v} \rVert - 2 \cdot \lVert \vec{u} \rVert \cdot \lVert \vec{v} \rVert \cdot \cos \theta \\
+        \end{split}  
+    \]
+
+    Aus dem Kosinussatz folgt das Skalarprodukt von $\vec{u}$ und $\vec{v}$:
+
+    \[
+        \begin{split}
+            \frac{1}{2} \cdot \left ( \lVert \vec{u} \rVert ^2 + \lVert \vec{v} \rVert ^2 - \lVert \vec{v} - \vec{u} \rVert ^2 \right ) &= \lVert \vec{u} \rVert \cdot \lVert \vec{v} \rVert \cdot \cos \theta \\
+            &= \langle \vec{u} \vert \vec{v} \rangle \\
+        \end{split}  
+    \]
+
+    In Koordinaten lässt sich das Skalarprodukt wie folgt darstellen.
+    Gegeben sind:
+    ${\vec{u}}_{s} = \m{u_x \\ u_y}$, ${\vec{v}}_{s} = \m{v_x \\ v_y}$
+
+    \[
+        \begin{split}
+            \langle \m{u_x \\ u_y} \vert \m{v_x \\ v_y} \rangle \myeq{Def.} \langle \vec{u} \vert \vec{v} \rangle = \frac{1}{2} \cdot \left ( \lVert \m{u_x \\ u_y} \rVert ^2 + \lVert \m{v_x \\ v_y} \rVert ^2 - \lVert \m{v_x - u_x \\ v_y - u_y} \rVert ^2 \right ) \\
+            = \frac{1}{2} \cdot \left ( u_x^2 + u_y^2 + v_x^2 + v_y^2 - [(v_x - u_x)^2 + (v_y - u_y)^2] \right ) \\
+        \end{split}
+    \]
+
+    Anwendung der binomioschen Formeln und anschließendes vereinfachen ergibt:
+
+    \[
+      \begin{split}
+        = \frac{1}{2} \cdot \left ( u_x^2 + u_y^2 + v_x^2 + v_y^2 - [u_x^2 + v_x^2 - 2u_x v_x + u_y^2 + v_y^2 - 2u_y v_y] \right ) \\
+        = \langle \m{u_x \\ u_y} \vert \m{v_x \\ v_y} \rangle = u_x v_x + u_y v_y
+      \end{split}  
+    \]
+
+    Es ist zu beachten, dass sich das Skalarprodukt nur mit Vektoren (Pfeilen) bilden lässt.
+    Es ist nicht möglich, das Skalarprodukt mit Punkten zu bilden.
+
+
+    Nun lässt sich durch Umstellen der Winkel zwischen zwei koordinatengegebenen Vektoren berechnen:
     
-
-    % Hier Anhang sinnvoll
-
-    
-
-
 
 
     % \subsection{Verschiebung von Punkten mittels Vektoren}
