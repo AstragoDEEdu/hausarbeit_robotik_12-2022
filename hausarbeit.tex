@@ -16,8 +16,11 @@
 % Grafiken und Bilder
 \usepackage{graphicx}
 
+% Gradsymbol etc.
+\usepackage{gensymb}
+
 % Seiteneinrichtung
-\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry} % https://latex-kurs.blogspot.com/2012/09/latex-seitenrander-und-textwidth.html
+\usepackage[a4paper, left=3cm, right=3cm, top=3cm, bottom=3cm]{geometry} % https://latex-kurs.blogspot.com/2012/09/latex-seitenrander-und-textwidth.html
 
 % Befehle
 \newcommand{\m}[1]{\begin{pmatrix}#1\end{pmatrix}}
@@ -140,7 +143,7 @@
         \end{split}
     \]
 
-    \textbf{Skalares Produkt} (Erklärung folgt)
+    \textbf{(Skalares) Produkt} (Erklärung folgt)
     \[
         \begin{split}
             r \cdot \m{a \\ b} = \m{r \cdot a \\ r \cdot b}
@@ -164,6 +167,7 @@
     \subsection{Einheitsvektoren im Koordinatensystem}
     Ein Punkt $P$ kann mit Hilfe von Einheitsvektoren im Koordinatensystem $U$ beschrieben werden.
     Das Koordinatensystem $U$ hat rechtwinklige Achsen.
+    Bei einer Drehung der $x$-Achse um 90 Grad gegen den Uhrzeigersinn entsteht deswegen die $y$-Achse.
     Es gibt jeweils einen Einheitsvektor in
     $x$-Richtung und einen Einheitsvektor in $y$-Richtung. Der Einheitsvektor in $x$-Richtung ist $\vec{{x}_{U}} = \m{1 \\ 0}$ und der Einheitsvektor in
     $y$-Richtung ist $\vec{{y}_{U}} = \m{0 \\ 1}$. Die Länge des Einheitsvektors ist dabei $1$
@@ -222,7 +226,7 @@
 
     \[
         \begin{split}
-            \lVert \vec{v} \rVert &= \lVert \m{\Delta x \\ \Delta y} \rVert \\
+            \lVert \vec{v} \rVert &= \left \lVert \m{\Delta x \\ \Delta y} \right \rVert \\
             \lVert \vec{v} \rVert &= \sqrt{\Delta{x}^2 + \Delta{y}^2}
         \end{split}
     \]
@@ -235,12 +239,10 @@
     \[
       \begin{split}
         dist(P, Q) &= \lVert \vec{PQ} \rVert \\
-        &= \lVert \m{v_x - u_x \\ v_y - u_y} \rVert \\
+        &= \left \lVert \m{v_x - u_x \\ v_y - u_y} \right \rVert \\
         &= \sqrt{(v_x - u_x)^2 + (v_y - u_y)^2} \\
       \end{split}  
     \] 
-
-    \newpage
 
     \subsection{Das Skalarprodukt}
     
@@ -277,7 +279,7 @@
 
     \[
         \begin{split}
-            \langle \m{u_x \\ u_y} \vert \m{v_x \\ v_y} \rangle \myeq{Def.} \langle \vec{u} \vert \vec{v} \rangle = \frac{1}{2} \cdot \left ( \lVert \m{u_x \\ u_y} \rVert ^2 + \lVert \m{v_x \\ v_y} \rVert ^2 - \lVert \m{v_x - u_x \\ v_y - u_y} \rVert ^2 \right ) \\
+            \left \langle \m{u_x \\ u_y} \vert \m{v_x \\ v_y} \right \rangle \myeq{Def.} \left \langle \vec{u} \vert \vec{v} \right \rangle = \frac{1}{2} \cdot \left ( \lVert \m{u_x \\ u_y} \rVert ^2 + \lVert \m{v_x \\ v_y} \rVert ^2 - \lVert \m{v_x - u_x \\ v_y - u_y} \rVert ^2 \right ) \\
             = \frac{1}{2} \cdot \left ( u_x^2 + u_y^2 + v_x^2 + v_y^2 - [(v_x - u_x)^2 + (v_y - u_y)^2] \right ) \\
         \end{split}
     \]
@@ -318,9 +320,125 @@
       \end{split}  
     \]
 
+    \subsection{Koordinaten Transformieren}
 
-    % \subsection{Verschiebung von Punkten mittels Vektoren}
-    % Um einen Punkt $P$ um einen Vektor $\vec{v}$ zu verschieben, wird der Punkt $P$ mit dem Vektor $\vec{v}$ multipliziert.
+    Es wird ein wie in Punkt 2.2 beschriebenes Koodinatensystem $T$ auf ein anderes Koordinatensystem $U$ gelegt.
+    Im Toolsystem $T$ wird ein Punkt $P$ durch Koordinaten beschrieben.
+    Das Ziel ist, die Koordinaten des Punktes $P$ im Toolsystem $U$ mathematisch zu bestimmen.
+
+    Das Skalarprodukt der beiden Koordinatenvektoren ergibt $0$, da die beiden Vektoren senkrecht zueinander stehen.
+
+    Wie bereits in Punkt 2.2 beschrieben lassen sich Punkte so mit Hilfe der Einheitsvektoren
+    beschreiben. \textbf{Anhang: Koordinatentransformation 1}
+
+    Formel:
+
+    \[
+        \begin{split}
+            {[P]}_{U} = {[O]}_{U} + a \cdot \vec{{x}_{U}} + b \cdot \vec{{y}_{U}} = \m{a \\ b}
+        \end{split}
+    \]
+
+    Ist der Verschiebevektor (also der Vektor von $O_U$ zu $O_T$) bekannt,
+    so kann die Formel wie folgt umgeschrieben werden:
+
+    \[
+        \begin{split}
+            \vec{u} = \Delta x \cdot \vec{{x}_{U}} + \Delta y \cdot \vec{{y}_{U}} = \m{\Delta x \\ \Delta y}
+        \end{split}
+    \]
+
+    ${[P]}_{T}$ wird durch $\m{x_T \\ y_T}$ beschrieben. $P$ wird folgendermaßen in $U$ beschrieben:
+
+    \[
+        \begin{split}
+            {[P]}_{U} &= {\left [{O}_{T} + {x}_{T} \cdot \vec{a}_T + {y}_{T} \cdot \vec{b}_T \right ]}_{U} \\
+            &= {[O_T]}_{U} + x_T \cdot {[\vec{a}_T]}_U + y_T \cdot {[\vec{b}_T]}_U \\
+        \end{split}
+    \]
+
+    Um die Koordinaten des Punktes ${[P]}_U$ zu bestimmen, reicht es, wie in der oberen Gleichung erkenntlich wird,
+    ${[O_T]}_{U}$, ${[\vec{a}_T]}_U$ und ${[\vec{b}_T]}_U$ zu bestimmen.
+
+    \subsection{Anwendung}
+
+    Gegeben sind ${[P]}_T = \m{x_T \\ y_T}$, ${[O_T]}_{U} = \m{x_{OTU} \\ y_{OTU}}$ und der Drehwinkel $\alpha$.
+    
+    Die Einheitsvektoren bezüglich des Toolsystems $T$ lassen sich mit Hilfe von Sinus und Cosinus berechnen:
+
+    \[
+        \begin{split}
+            {[\vec{a}_T]}_U = \m{\cos \alpha \\ \sin \alpha} \\
+            {[\vec{b}_T]}_U = \m{\cos \alpha + 90 \degree \\ \sin \alpha + 90 \degree} \\
+        \end{split}
+    \]
+
+    Durch das Skalarprodukt $\left \langle \vec{a}_T \Vert \vec{b}_T \right \rangle$ kann das erhaltene Ergebnis
+    auf Korrektheit überpräft werden. Das Ergebnis des Skalarprodukts muss 0 sein, da beide Vektoren trotz der Drehung
+    senkrecht zueinander stehen. Die länge der Einzelnen Vektoren muss ebenfalls 1 betragen. 
+
+    \[
+        \begin{split}
+            {[P]}_{U} &= {[O_T]}_{U} + x_T \cdot {[\vec{a}_T]}_U + y_T \cdot {[\vec{b}_T]}_U \\
+            &= \m{x_{OTU} \\ y_{OTU}} + x_T \cdot \m{\cos \alpha \\ \sin \alpha} + y_T \cdot \m{\cos \alpha + 90 \degree \\ \sin \alpha + 90 \degree} \\
+            &= \m{x_{OTU} + x_T \cdot \cos \alpha + y_T \cdot \cos \alpha + 90 \degree \\ y_{OTU} + x_T \cdot \sin \alpha + y_T \cdot \sin \alpha + 90 \degree} \\
+        \end{split}
+    \]
+
+    Diese Gleichung liefert bereits das korrekte Ergebnis. Es gibt jedoch eine Möglichkeit, die Gleichung zu vereinfachen.
+    Dafür wird die sogenannte Matrizenrechnung verwendet.
+
+    \subsection{Matrizenrechnung}
+
+    Eine Matrix ist ein rechteckiges Zahlenschema.
+    $M = \m{\frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}}$ ist eine Matrix
+    mit zwei Zeilen und zwei Spalten.
+
+    Durch Matzizen lässt sich die obige Gleichung folgendermaßen vereinfachen.
+
+    Da $\cos \alpha + 90 \degree = - \sin \alpha$ und $\sin \alpha + 90 \degree = \cos \alpha$ gilt,
+    kann die Matrix wie folgt definiert werden:
+
+    \[
+        \begin{split}
+            M = \m{\cos \alpha & - \sin \alpha \\ \sin \alpha & \cos \alpha}
+        \end{split}
+    \]
+
+    $x_T$ und $y_T$ werden dann mit der Matrix multipliziert:
+
+    \[
+        \begin{split}
+            {[P]}_{T} \cdot M = \m{x_T \\ y_T} \cdot \m{\cos \alpha & - \sin \alpha \\ \sin \alpha & \cos \alpha} \\
+        \end{split}
+    \]
+
+    Für die Multiplikation von $2 \cdot 2$ Matrizen gillt, dass die Anzahl der Spalten der ersten Matrix
+    mit der Anzahl der Zeilen der zweiten Matrix übereinstimmen muss. Die Anzahl der Zeilen der ersten Matrix
+    entspricht der Anzahl der Zeilen der Ergebnismatrix und die Anzahl der Spalten der zweiten Matrix entspricht
+    der Anzahl der Spalten der Ergebnismatrix.
+
+    Die erste Zeile der ersten Matrix wird mit der ersten Spalte der zweiten Matrix multipliziert.
+    Die zweite Zeile der ersten Matrix wird mit der zweiten Spalte der zweiten Matrix multipliziert.
+
+    Es ergibt sich die folgende Gleichung:
+
+    \[
+        \begin{split}
+            {[P]}_{T} \cdot M &= \m{x_T \\ y_T} \cdot \m{\cos \alpha & - \sin \alpha \\ \sin \alpha & \cos \alpha} \\
+            &= x_T \cdot \m{\cos \alpha \\ \sin \alpha} + y_T \cdot \m{- \sin \alpha \\ \cos \alpha} \\
+        \end{split}
+    \]
+
+    Diesem Gleichungsteil wird nun lediglich noch die Position des Toolsystems $T$ im Ursprungssystem $U$ hinzugefügt.
+
+    Die Endgültige Gleichung lautet:
+
+    \[
+        \begin{split}
+            {[P]}_U &= {[O_T]}_U + \m{x_T \\ y_T} \cdot \m{\cos \alpha & - \sin \alpha \\ \sin \alpha & \cos \alpha} \\
+        \end{split}
+    \]
     
 
     % ========== Anhänge ==========
@@ -402,6 +520,24 @@
     $\vec{w}$ ist der Differenzvektor aus $\vec{v}$ und $\vec{u}$.
     Er hat die Länge $\lVert \vec{v} - \vec{u} \rVert$.
     Der Winkel zwischen $\vec{v}$ und $\vec{u}$ ist $\theta$.
+
+    \newpage
+
+    \subsection{Koordinatentransformation 1}
+    \begin{figure}[h]
+        \centering
+        \scalebox{0.6}{
+            \includegraphics{./images/Trafo-1-2022-12-27@21-54-49.png}
+        }
+    \end{figure}
+
+    \subsection{TITEL}
+    \begin{figure}[h]
+        \centering
+        \scalebox{0.5}{
+            \includegraphics{./images/Mathemann.png}
+        }
+    \end{figure}
 
     \newpage
 
