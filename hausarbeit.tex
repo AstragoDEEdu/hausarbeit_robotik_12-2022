@@ -57,11 +57,12 @@
     In der folgenden Arbeit wird lediglich die Verschiebung von Koordinatensystemen in der Ebene (also in zwei Dimensionen) behandelt.
     Die Methodik lässt sich jedoch auch auf die dritte Dimension übertragen. Auch die Anzahl der Verschiebungen ist
     beliebig, da man die
-    hier verwendete Formel beliebig oft hintereinander anwenden kann, wird hier jedoch auf eine Verschiebung beschränkt.
-    Die Verschiebung von Koordinatensystemen findet beispielweise in der Robotik Anwendung: Am Ende eines Roboterarms
+    hier verwendete Formel beliebig oft hintereinander anwenden kann. Es wird sich hier jedoch auf eine Verschiebung beschränkt.
+    Die Verschiebung von Koordinatensystemen findet beispielweise in der Robotik Anwendung. Am Ende eines Roboterarms,
+    welcher sich beeits in einem Koordinatensystem befindet,
     befindet sich meist ein weiteres Koordinatensystem,
     "Toolsystem". In diesem System gibt es keine Verschiebung der einzelnen Punkte, wenn sich der Arm bewegt,
-    sondern lediglich wenn sich das Tool, oder dessen Ladung beziwhungsweise Werkzeug bewegt.
+    sondern lediglich wenn sich das Tool, oder dessen Ladung beziehungsweise Werkzeug bewegt.
 
     \subsection{Schreibweisen und Definitionen}
     
@@ -86,7 +87,7 @@
     (bei drei Dimensionen zusätzlich in $z$-Richtung) und mit einem Pfeil über dem Buchstaben gekennzeichnet.
     Vektoren haben keine Feste Postition im Koordinatensystem. Sie können beliebig verschoben werden.
     Solange der Vektor alle seine Eigenschaften (Länge in $x$-, $y$- und ggf. $z$-Richtung) behält,
-    ist er der gleiche Vektor. \textbf{Anhang: Vektoren 1}. Zwischen zwei gleichen Vektroen lässt sich ein
+    ist er der gleiche Vektor. \textbf{Anhang: Vektoren 1}. Zwischen zwei gleichen Vektoren lässt sich ein
     Paralellogramm zeichnen.
     
 
@@ -130,8 +131,8 @@
     Punkte können mithilfe von Vektoren verschoben werden. Der Punkt wird dabei mit dem Vektor
     addiert. Dies entspricht dem Anhängen des Vektors an den Punkt. Das Ende des Vektors entspricht dann
     der Koordinate des verschoben Punkts. Man kann auch ein Parallelogramm zwischen dem Punkt und dem
-    Vektor bilden. Der "fehlende"
-    Punkt ergibt dann die gesuchte Stelle des neuen Punktes. \textbf{Anhang: Vektoren 3}.
+    Vektor bilden. Der fehlende Punkt
+    ergibt dann die gesuchte Stelle des neuen Punktes. \textbf{Anhang: Vektoren 3}.
 
     \subsection{Einheitsvektoren im Koordinatensystem}
     Ein Punkt $P$ kann mit Hilfe von Einheitsvektoren im Koordinatensystem $U$ beschrieben werden.
@@ -419,9 +420,9 @@
     \section{Schlusswort}
 
     Gezeigt wurde die Verschiebung eines Punktes $P$ im Toolsystem $T$ in das Ursprungssystem $U$
-    mit gedrahtem und verschobenem Toolsystem.
-    Es ist möglich, diese Verschiebungen auch mit mehreren System durchzuführen. Beispielweise
-    eine Verschiebung vomm Toolsystem $T$ in ein Zwischensystem $Z$ und von dort in das Ursprungssystem $U$.
+    mit gedrehtem und verschobenem Toolsystem.
+    Es ist möglich, diese Verschiebungen auch mit mehreren Systemen durchzuführen. Beispielweise
+    eine Verschiebung vom Toolsystem $T$ in ein Zwischensystem $Z$ und von dort in das Ursprungssystem $U$.
     Diese Möglichkeit kann man nutzen um bei einem Roboterarm mit mehreren Gelenken die Position
     des Toolsystems zu berechnen. Dafür wird die Formel optimiert und es werde zwischensysteme an den Gelenken
     eingefügt, damit immer nur entweder eine Drehung oder eine Verschiebung von einem System in das andere
