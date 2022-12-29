@@ -230,7 +230,7 @@
     Beide Vektoren haben den selben Ursprung. Der Winkel $\theta$ ist hierbei ungerichtet
     (Siehe \textbf{Anhang: Skalarprodukt 1}) und liegt zwischen 0 und 180 Grad.
     
-    Der kosinussatz besagt nun folgendes:
+    Der Kosinussatz besagt nun folgendes:
 
     \[
         \begin{split}
@@ -349,8 +349,8 @@
     \]
 
     Durch das Skalarprodukt $\left \langle \vec{a}_T \Vert \vec{b}_T \right \rangle$ kann das erhaltene Ergebnis
-    auf Korrektheit überpräft werden. Das Ergebnis des Skalarprodukts muss 0 sein, da beide Vektoren trotz der Drehung
-    senkrecht zueinander stehen. Die länge der Einzelnen Vektoren muss ebenfalls 1 betragen. 
+    auf Korrektheit überprüft werden. Das Ergebnis des Skalarprodukts muss 0 sein, da beide Vektoren trotz der Drehung
+    senkrecht zueinander stehen. Die länge der einzelnen Vektoren muss ebenfalls 1 betragen. 
 
     \[
         \begin{split}
@@ -369,7 +369,7 @@
     $M = \m{\frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}}$ ist eine Matrix
     mit zwei Zeilen und zwei Spalten.
 
-    Durch Matzizen lässt sich die obige Gleichung folgendermaßen vereinfachen.
+    Durch Matrizen lässt sich die obige Gleichung folgendermaßen vereinfachen.
 
     Da $\cos \alpha + 90 \degree = - \sin \alpha$ und $\sin \alpha + 90 \degree = \cos \alpha$ gilt,
     kann die Matrix wie folgt definiert werden:
@@ -388,7 +388,7 @@
         \end{split}
     \]
 
-    Für die Multiplikation von $2 \cdot 2$ Matrizen gillt, dass die Anzahl der Spalten der ersten Matrix
+    Für die Multiplikation von $2 \cdot 2$ Matrizen gilt, dass die Anzahl der Spalten der ersten Matrix
     mit der Anzahl der Zeilen der zweiten Matrix übereinstimmen muss. Die Anzahl der Zeilen der ersten Matrix
     entspricht der Anzahl der Zeilen der Ergebnismatrix und die Anzahl der Spalten der zweiten Matrix entspricht
     der Anzahl der Spalten der Ergebnismatrix.
@@ -407,7 +407,7 @@
 
     Diesem Gleichungsteil wird nun lediglich noch die Position des Toolsystems $T$ im Ursprungssystem $U$ hinzugefügt.
 
-    Die Endgültige Gleichung lautet:
+    Die Endgültige Gleichung lautet
 
     \[
         \begin{split}
@@ -423,8 +423,8 @@
     mit gedrehtem und verschobenem Toolsystem.
     Es ist möglich, diese Verschiebungen auch mit mehreren Systemen durchzuführen. Beispielweise
     eine Verschiebung vom Toolsystem $T$ in ein Zwischensystem $Z$ und von dort in das Ursprungssystem $U$.
-    Diese Möglichkeit kann man nutzen um bei einem Roboterarm mit mehreren Gelenken die Position
-    des Toolsystems zu berechnen. Dafür wird die Formel optimiert und es werde zwischensysteme an den Gelenken
+    Diese Möglichkeit kann man nutzen, um bei einem Roboterarm mit mehreren Gelenken die Position
+    des Toolsystems zu berechnen. Dafür wird die Formel optimiert und es werden Zwischensysteme an den Gelenken
     eingefügt, damit immer nur entweder eine Drehung oder eine Verschiebung von einem System in das andere
     durchgeführt werden muss. Diese Herangehensweise ist unter anderem in der Kinematik von Robotern
     zu finden und wird dort als Denavit-Hartenberg-Notation bezeichnet.
